@@ -1,0 +1,15 @@
+:root { --bg: #0f1424; --panel: #1b2338; --ink: #e8ecf4; --muted: #9aa6bf; --accent: #3fb6e0; --green: #3fbf6a; }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 17px/1.6 system-ui, -apple-system, "Segoe UI", sans-serif; }
+main { max-width: 720px; margin: 0 auto; padding: 32px 18px 64px; }
+.logo { font-family: "Press Start 2P", monospace; font-size: clamp(18px, 6vw, 30px); letter-spacing: 1px; margin: 12px 0 4px; }
+.logo b { color: var(--accent); font-weight: 400; }
+nav { display: flex; gap: 18px; flex-wrap: wrap; margin: 14px 0 28px; }
+a { color: var(--accent); }
+h1 { font-size: 1.6rem; margin: 0.4em 0; text-wrap: balance; }
+h2 { font-size: 1.15rem; margin: 1.6em 0 0.3em; }
+.card { background: var(--panel); border-radius: 6px; padding: 18px 20px; margin: 18px 0; }
+.muted { color: var(--muted); font-size: 0.95rem; }
+.lang { margin: 8px 0 22px; font-size: 0.95rem; }
+footer { color: var(--muted); font-size: 0.9rem; margin-top: 48px; }
+ul { padding-left: 1.2em; }
