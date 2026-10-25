@@ -1,6 +1,182 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"><link rel="stylesheet" href="style.css"><title>StartupSwipe</title></head><body><main><div class="logo">STARTUP<b>SWIPE</b></div><nav><a href="./">Home</a><a href="privacy.html">Privacy</a><a href="support.html">Support</a></nav>
-<h1>A pixel art management game about running a startup.</h1>
-<p>You start in a garage with two people and little money. Every quarter, the board wants numbers. You can give them the ones you have, or the ones they'd like to see.</p>
-<p class="muted">Coming to iPhone, Android and Steam. In English, Spanish and Italian.</p>
-<div class="card"><p><b>Español.</b> Un juego de gestión en pixel art sobre dirigir una startup. Empiezas en un garaje, con dos personas y poco dinero. Cada trimestre, la junta pide números.</p></div>
-<footer>© 2026 Maurizzio Peñalba</footer></main></body></html>
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<script>document.documentElement.classList.remove('no-js')</script>
+<script>try{var l=localStorage.getItem('ss-lang');if((l==='es'||(!l&&/^es\b/i.test(navigator.language||'')))&&!/[?&]lang=/.test(location.search))location.replace('es/'+location.hash)}catch(e){}</script>
+<title>StartupSwipe, a pixel art management game</title>
+<meta name="description" content="StartupSwipe is a pixel art management game. Augusto puts you in charge of his startup with twenty-four thousand dollars and a garage. Every quarter, the board wants numbers. You can give them the ones you have, or the ones they’d like to see.">
+<link rel="canonical" href="https://mpenalba1.github.io/startupswipe/">
+<link rel="alternate" hreflang="en" href="https://mpenalba1.github.io/startupswipe/">
+<link rel="alternate" hreflang="es" href="https://mpenalba1.github.io/startupswipe/es/">
+<link rel="alternate" hreflang="x-default" href="https://mpenalba1.github.io/startupswipe/">
+<meta name="theme-color" content="#2A3C59">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="alternate" type="application/atom+xml" title="StartupSwipe News" href="news/feed.xml">
+<meta property="og:site_name" content="StartupSwipe">
+<meta property="og:type" content="website">
+<meta property="og:title" content="StartupSwipe, a pixel art management game">
+<meta property="og:description" content="StartupSwipe is a pixel art management game. Augusto puts you in charge of his startup with twenty-four thousand dollars and a garage. Every quarter, the board wants numbers. You can give them the ones you have, or the ones they’d like to see.">
+<meta property="og:url" content="https://mpenalba1.github.io/startupswipe/">
+<meta property="og:image" content="https://mpenalba1.github.io/startupswipe/assets/art/og.png">
+<meta property="og:image:width" content="1232">
+<meta property="og:image:height" content="706">
+<meta property="og:image:alt" content="StartupSwipe">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="StartupSwipe, a pixel art management game">
+<meta name="twitter:description" content="StartupSwipe is a pixel art management game. Augusto puts you in charge of his startup with twenty-four thousand dollars and a garage. Every quarter, the board wants numbers. You can give them the ones you have, or the ones they’d like to see.">
+<meta name="twitter:image" content="https://mpenalba1.github.io/startupswipe/assets/art/og.png">
+<link rel="preload" href="assets/fonts/pixelify-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&amp;display=swap">
+<link rel="stylesheet" href="assets/css/site.css?v=b00b4e5a">
+<script src="assets/js/site.js?v=b00b4e5a" defer></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"VideoGame","name":"StartupSwipe","url":"https://mpenalba1.github.io/startupswipe/","description":"StartupSwipe is a pixel art management game. Augusto puts you in charge of his startup with twenty-four thousand dollars and a garage. Every quarter, the board wants numbers. You can give them the ones you have, or the ones they’d like to see.","image":"https://mpenalba1.github.io/startupswipe/assets/art/og.png","inLanguage":["en","es","it"],"gamePlatform":["iOS","Android","Windows","macOS"],"genre":["Simulation","Management"],"author":{"@type":"Person","name":"Maurizzio Peñalba"}}</script>
+</head>
+<body class="home">
+<a class="skip" href="#content">Skip to content</a>
+<header class="top top-home">
+  <a class="brand" href="./" aria-label="StartupSwipe home"><img class="px brand-icon" src="assets/art/icon.png" width="32" height="32" alt=""><img class="px brand-logo" src="assets/art/logo.png" width="180" height="19" alt=""></a>
+  <nav class="top-nav" aria-label="Main">
+    <a href="news/">News</a>
+    <a href="es/" hreflang="es" lang="es">Español</a>
+  </nav>
+</header>
+<main id="content">
+<section class="hero">
+  <div class="hero-sky">
+    <h1 class="logo">
+      <span class="sr-only">StartupSwipe</span>
+      <img class="px logo-line" src="assets/art/logo.png" width="180" height="19" alt="">
+      <span class="logo-stack"><img class="px" src="assets/art/logo-startup.png" width="105" height="19" alt=""><img class="px" src="assets/art/logo-swipe.png" width="75" height="19" alt=""></span>
+    </h1>
+    <p class="tagline">The board wants numbers</p>
+  </div>
+  <div class="world">
+    <div class="world-frame"><img class="px world-art" src="assets/art/world-dusk.png" width="1300" height="790" alt="The company’s tower at dusk, cut open floor by floor: offices full of people, a café and a copycat next door, and basements dug deep into the ground." fetchpriority="high"></div>
+    <div class="ground">
+      <p class="hook panel">StartupSwipe is a pixel art management game. Augusto puts you in charge of his startup with twenty-four thousand dollars and a garage. Every quarter, the board wants numbers. You can give them the ones you have, or the ones they’d like to see.</p>
+      <div class="buy panel">
+        <ul class="stores" aria-label="Where to play">
+  <li><span class="store"><span class="store-text"><span class="store-name">App Store</span><span class="store-hint">iPhone</span></span><span class="tag">Coming soon</span></span></li>
+  <li><span class="store"><span class="store-text"><span class="store-name">Google Play</span><span class="store-hint">Android</span></span><span class="tag">Coming soon</span></span></li>
+  <li><span class="store"><span class="store-text"><span class="store-name">Steam</span><span class="store-hint">Windows and macOS</span></span><span class="tag">Coming soon</span></span></li>
+</ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="reel" aria-label="One whole run sped up, from the garage on day 1 to the tower on day 128.">
+  <div class="reel-frame">
+    <video class="reel-video" controls muted loop playsinline preload="none" width="864" height="1080" poster="assets/video/timelapse-tall.webp" data-wide="assets/video/timelapse-wide.mp4" data-wide-poster="assets/video/timelapse-wide.webp" aria-label="One whole run sped up, from the garage on day 1 to the tower on day 128.">
+      <source src="assets/video/timelapse-tall.mp4" type="video/mp4">
+    </video>
+  </div>
+</section>
+
+<section class="about" aria-labelledby="about-h">
+  <h2 id="about-h" class="sr-only">About the game</h2>
+  <figure class="dlg">
+    <figcaption class="dlg-name">Augusto</figcaption>
+    <blockquote class="dlg-line"><p>Here’s twenty-four thousand dollars. For a garage, that’s a fortune.</p></blockquote>
+    <img class="px dlg-face" src="assets/art/augusto.png" width="32" height="33" alt="">
+  </figure>
+  <p>With that, Augusto puts you in charge of his startup. StartupSwipe is a pixel art management game, and it starts in a garage with two people and an idea that doesn’t work yet.</p>
+  <figure class="media media-shot"><div class="crop" style="--px:280;--py:80;--pw:1160;--ph:870;--dx:0;--dy:0;--dw:1920;--dh:1080"><img src="assets/shots/en/02-garage.png" width="1920" height="1080" alt="Day 1 in the garage. Three people code under the company sign, and the empty floor upstairs is for sale." loading="lazy" decoding="async"></div></figure>
+  <p>You could spend your nights coding so you have something to show. Or you could go out and sell it before it exists. Selling is faster, but sooner or later somebody’s going to want what you promised them.</p>
+  <figure class="media media-shot"><div class="crop" style="--px:376;--py:170;--pw:1168;--ph:740;--dx:304;--dy:164;--dw:1312;--dh:738"><img src="assets/shots/en/04-demo-day.png" width="1920" height="1080" alt="Demo Day. You answered “Thousands” instead of “0 customers”, and a judge says “That doesn’t add up.”" loading="lazy" decoding="async"></div></figure>
+  <p>If things go well, you’ll outgrow the garage, and every new floor brings new people with problems you didn’t have before.</p>
+  <figure class="media media-shot"><div class="crop" style="--px:520;--py:0;--pw:1200;--ph:940;--dx:0;--dy:0;--dw:1920;--dh:1080"><img src="assets/shots/en/01-tower.png" width="1920" height="1080" alt="The tower in chapter V, with floors full of people at work, a café next door and the vault in the basement." loading="lazy" decoding="async"></div></figure>
+  <p>Every quarter, the board wants numbers. You can tell them the truth, but the truth hurts. You can also dress it up a little. Maybe they won’t notice.</p>
+  <figure class="media media-gif"><img class="px" src="assets/gifs/en/e-board-smoke.gif" width="616" height="350" alt="The board asks for active users. You pick Smoke, “A hundred thousand and climbing,” and the answer is “That scales.”" loading="lazy" decoding="async"></figure>
+  <p>Just remember, whatever you dress up doesn’t go away. It piles up, and the higher you climb, the more people want a look.</p>
+  <figure class="media media-gif"><img class="px" src="assets/gifs/en/d-smoke-box-vault.gif" width="616" height="390" alt="A bug on the support floor becomes “It’s not a bug, it’s a feature,” and one more box of smoke shows up in the vault." loading="lazy" decoding="async"></figure>
+  <p>Everyone on your team has a first and last name. Earn their trust, and they’ll help you get to the top. But be careful. Getting too close to someone can turn into a conflict of interest, and that’s a trip to HR. Or worse, it could cost you your job.</p>
+  <figure class="media media-gif"><img class="px" src="assets/gifs/en/c-heart-talk.gif" width="616" height="540" alt="A talk with someone on your team. You pick an answer, and a heart pops up over her." loading="lazy" decoding="async"></figure>
+  <p>And you’re not the only company on the block. The one across the street copies everything you do, and it’s offering your people a little more than you pay them.</p>
+  <figure class="media media-shot"><div class="crop" style="--px:420;--py:30;--pw:1440;--ph:900;--dx:0;--dy:0;--dw:1920;--dh:1080"><img src="assets/shots/en/08-street-cafe-clon.png" width="1920" height="1080" alt="The street at lunch. The café downstairs, and the copycat’s glass office next door." loading="lazy" decoding="async"></div></figure>
+  <p>On inspection day, there’s a cable nobody should see. The sensible thing would be to unplug it. Then again, sneaking it past the inspector has its charm.</p>
+  <figure class="media media-gif"><img class="px" src="assets/gifs/en/b-stealth-minigame.gif" width="616" height="540" alt="A minigame: slip between the guards’ cones of sight and hide in the crate." loading="lazy" decoding="async"></figure>
+</section>
+
+<section class="gallery" aria-labelledby="gal-h">
+  <h2 id="gal-h" class="sr-only">Screenshots</h2>
+  <div class="rail" role="region" aria-label="Screenshots. Scroll sideways or use the buttons." tabindex="0">
+    <ul class="rail-list">
+      <li class="rail-item"><button type="button" class="rail-shot" data-i="0"><img src="assets/shots/en/03-board-meeting.png" width="1920" height="1080" alt="The board asks how many active users you have. You can answer with a fact, with smoke or with a dodge." loading="lazy" decoding="async"></button></li>
+      <li class="rail-item"><button type="button" class="rail-shot" data-i="1"><img src="assets/shots/en/13-first-night.png" width="1920" height="1080" alt="The first night in the garage, under string lights. “Someone always stays here.”" loading="lazy" decoding="async"></button></li>
+      <li class="rail-item"><button type="button" class="rail-shot" data-i="2"><img src="assets/shots/en/06-smoke-vault.png" width="1920" height="1080" alt="The basement: the server racks and the vault, full of boxes of smoke." loading="lazy" decoding="async"></button></li>
+      <li class="rail-item"><button type="button" class="rail-shot" data-i="3"><img src="assets/shots/en/05-talk-heart.png" width="1920" height="1080" alt="A talk with someone on your team. A heart pops up over her after your answer." loading="lazy" decoding="async"></button></li>
+      <li class="rail-item"><button type="button" class="rail-shot" data-i="4"><img src="assets/shots/en/07-stealth-minigame.png" width="1920" height="1080" alt="A minigame seen from above: guards with cones of sight, and a crate that got through unseen." loading="lazy" decoding="async"></button></li>
+      <li class="rail-item"><button type="button" class="rail-shot" data-i="5"><img src="assets/shots/en/11-auction-minigame.png" width="1920" height="1080" alt="An ad campaign: the street full of thoughts, and you pay for each one you catch." loading="lazy" decoding="async"></button></li>
+      <li class="rail-item"><button type="button" class="rail-shot" data-i="6"><img src="assets/shots/en/10-night-tower.png" width="1920" height="1080" alt="The whole tower at night, from the lit sign on the roof down to the basements." loading="lazy" decoding="async"></button></li>
+      <li class="rail-item"><button type="button" class="rail-shot" data-i="7"><img src="assets/shots/en/02-garage.png" width="1920" height="1080" alt="Day 1 in the garage. Three people code under the company sign, and the empty floor upstairs is for sale." loading="lazy" decoding="async"></button></li>
+      <li class="rail-item"><button type="button" class="rail-shot" data-i="8"><img src="assets/shots/en/04-demo-day.png" width="1920" height="1080" alt="Demo Day. You answered “Thousands” instead of “0 customers”, and a judge says “That doesn’t add up.”" loading="lazy" decoding="async"></button></li>
+      <li class="rail-item"><button type="button" class="rail-shot" data-i="9"><img src="assets/shots/en/01-tower.png" width="1920" height="1080" alt="The tower in chapter V, with floors full of people at work, a café next door and the vault in the basement." loading="lazy" decoding="async"></button></li>
+      <li class="rail-item"><button type="button" class="rail-shot" data-i="10"><img src="assets/shots/en/08-street-cafe-clon.png" width="1920" height="1080" alt="The street at lunch. The café downstairs, and the copycat’s glass office next door." loading="lazy" decoding="async"></button></li>
+    </ul>
+  </div>
+  <div class="rail-nav">
+    <button type="button" class="btn btn-icon rail-prev" aria-label="Previous"><span aria-hidden="true" class="arrow arrow-l"></span></button>
+    <p class="rail-count"><span class="rail-now">1</span> of 11</p>
+    <button type="button" class="btn btn-icon rail-next" aria-label="Next"><span aria-hidden="true" class="arrow arrow-r"></span></button>
+  </div>
+  <dialog class="viewer" aria-label="Screenshots">
+    <div class="viewer-in">
+      <img class="viewer-img" src="" alt="">
+      <div class="viewer-bar">
+        <button type="button" class="btn btn-icon viewer-prev" aria-label="Previous"><span aria-hidden="true" class="arrow arrow-l"></span></button>
+        <p class="viewer-count"></p>
+        <button type="button" class="btn btn-icon viewer-next" aria-label="Next"><span aria-hidden="true" class="arrow arrow-r"></span></button>
+        <button type="button" class="btn viewer-close">Close</button>
+      </div>
+    </div>
+  </dialog>
+</section>
+
+<section class="get" aria-labelledby="get-h">
+  <h2 id="get-h" class="get-title">There are five chapters and twelve endings.</h2>
+  <p class="get-sub">Which one you end up with depends on everything you said to get there.</p>
+  <div class="get-cards">
+    <div class="card panel">
+      <h3>iPhone and Android</h3>
+      <p>Chapter I is free, start to finish. If you want to see how far your company goes, chapters II to V come together in one in-app purchase: the Full Game. You pay once. No subscription, no ads.</p>
+      <ul class="stores" aria-label="Where to play">
+  <li><span class="store"><span class="store-text"><span class="store-name">App Store</span></span><span class="tag">Coming soon</span></span></li>
+  <li><span class="store"><span class="store-text"><span class="store-name">Google Play</span></span><span class="tag">Coming soon</span></span></li>
+</ul>
+    </div>
+    <div class="card panel">
+      <h3>Windows and macOS</h3>
+      <p>On Steam, it’s the whole game in one purchase, with nothing to buy inside.</p>
+      <ul class="stores" aria-label="Where to play">
+  <li><span class="store"><span class="store-text"><span class="store-name">Steam</span></span><span class="tag">Coming soon</span></span></li>
+</ul>
+    </div>
+  </div>
+  <p class="get-langs">In English, Spanish and Italian.</p>
+</section>
+
+</main>
+<footer class="foot">
+  <div class="foot-in">
+    <a class="foot-brand" href="./"><img class="px" src="assets/art/logo.png" width="180" height="19" alt="StartupSwipe"></a>
+    <nav class="foot-nav" aria-label="More">
+      <a href="news/">News</a>
+      <a href="press/">Press kit</a>
+      <a href="support.html">Support</a>
+      <a href="privacy.html">Privacy</a>
+    </nav>
+    <div class="foot-end">
+      <a class="foot-lang" href="es/" hreflang="es" lang="es">Español</a>
+      <p class="foot-copy">© 2026 Maurizzio Peñalba</p>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="es">
+  <title>StartupSwipe: Noticias</title>
+  <subtitle>Las noticias oficiales de StartupSwipe.</subtitle>
+  <link href="https://mpenalba1.github.io/startupswipe/es/noticias/" rel="alternate" type="text/html"/>
+  <link href="https://mpenalba1.github.io/startupswipe/es/noticias/feed.xml" rel="self" type="application/atom+xml"/>
+  <id>https://mpenalba1.github.io/startupswipe/es/noticias/</id>
+  <updated>2026-10-24T12:00:00Z</updated>
+  <author><name>Maurizzio Peñalba</name></author>
+  <icon>https://mpenalba1.github.io/startupswipe/apple-touch-icon.png</icon>
+
+</feed>
