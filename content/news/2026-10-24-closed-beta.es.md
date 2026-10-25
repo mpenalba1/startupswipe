@@ -4,7 +4,7 @@ date: 2026-10-24
 lang: es
 slug: beta-cerrada-iphone
 summary: Un grupo chico ya puede jugar el capítulo I de StartupSwipe en iPhone, con TestFlight.
-draft: true
+draft: false
 ---
 
 Augusto ya tiene el garaje y los veinticuatro mil dólares. Le faltaba alguien que lo probara antes que nadie.

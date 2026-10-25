@@ -4,7 +4,7 @@ date: 2026-10-24
 lang: en
 slug: closed-beta-iphone
 summary: A small group can now play chapter I of StartupSwipe on iPhone, through TestFlight.
-draft: true
+draft: false
 ---
 
 Augusto already has the garage and the twenty-four thousand dollars. What he needed was someone to try it before anyone else.
