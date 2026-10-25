@@ -9,4 +9,4 @@ draft: false
 
 Augusto wanted it tried on every phone in the office.
 
-Starting today, chapter I also plays on Android, in a closed beta for a small group.
+Starting today, chapter I also plays on Android, with the same small group. If something breaks there, better now than later.

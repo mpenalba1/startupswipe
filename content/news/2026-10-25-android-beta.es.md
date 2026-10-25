@@ -9,4 +9,4 @@ draft: false
 
 Augusto quería probarlo en todos los teléfonos de la oficina.
 
-Desde hoy, el capítulo I también se juega en Android, en una beta cerrada para un grupo chico.
+Desde hoy, el capítulo I también se juega en Android, con el mismo grupo chico. Si algo se rompe ahí, mejor ahora que después.
