@@ -9,15 +9,14 @@
   <author><name>Maurizzio Peñalba</name></author>
   <icon>https://mpenalba1.github.io/startupswipe/apple-touch-icon.png</icon>
   <entry>
-    <title>The closed beta is now on Android too</title>
+    <title>The closed beta reaches Android</title>
     <link href="https://mpenalba1.github.io/startupswipe/news/closed-beta-android/"/>
     <id>https://mpenalba1.github.io/startupswipe/news/closed-beta-android/</id>
     <published>2026-10-25T12:00:00Z</published>
     <updated>2026-10-25T12:00:00Z</updated>
-    <summary>Chapter I of StartupSwipe can now be played on Android, through Google Play's closed testing.</summary>
-    <content type="html">&lt;p&gt;A day after iPhone, the closed beta of StartupSwipe is open on Android, through Google Play.&lt;/p&gt;
-&lt;p&gt;It’s the same chapter I as on iPhone, with today’s fixes.&lt;/p&gt;
-&lt;p&gt;It’s a closed beta, for a small group by invitation. If you’re in it, you already know how to install it. If something breaks or doesn’t make sense, send us a screenshot.&lt;/p&gt;</content>
+    <summary>Chapter I now plays on Android too, in a closed beta.</summary>
+    <content type="html">&lt;p&gt;Augusto wanted it tried on every phone in the office.&lt;/p&gt;
+&lt;p&gt;Starting today, chapter I also plays on Android, in a closed beta for a small group.&lt;/p&gt;</content>
   </entry>
   <entry>
     <title>The closed beta is open on iPhone</title>
