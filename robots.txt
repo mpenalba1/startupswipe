@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://mpenalba1.github.io/startupswipe/sitemap.xml
+Sitemap: https://startupswipegame.com/sitemap.xml

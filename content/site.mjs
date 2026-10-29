@@ -4,7 +4,7 @@
 
 export const config = {
   // The public address of the site, with a trailing slash. Change it if the site moves to its own domain.
-  siteUrl: 'https://mpenalba1.github.io/startupswipe/',
+  siteUrl: 'https://startupswipegame.com/',
   // Store pages. Leave them null until the page is live: the button then says «Coming soon» and links nowhere.
   stores: {
     appstore: null,

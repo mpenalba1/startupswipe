@@ -1,6 +1,6 @@
 # startupswipe: el sitio web
 
-El sitio público de StartupSwipe: https://mpenalba1.github.io/startupswipe/
+El sitio público de StartupSwipe: https://startupswipegame.com/ (antes `mpenalba1.github.io/startupswipe/`, que redirige solo). El dominio está en GoDaddy, apuntado a GitHub Pages.
 
 Es HTML estático servido por GitHub Pages desde la raíz de `main`. Las páginas se generan con un script de Node sin
 dependencias (`tools/build.mjs`) y **se suben ya generadas**: GitHub Pages no corre nada.

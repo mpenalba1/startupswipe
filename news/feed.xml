@@ -2,16 +2,16 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <title>StartupSwipe: News</title>
   <subtitle>Official news about StartupSwipe.</subtitle>
-  <link href="https://mpenalba1.github.io/startupswipe/news/" rel="alternate" type="text/html"/>
-  <link href="https://mpenalba1.github.io/startupswipe/news/feed.xml" rel="self" type="application/atom+xml"/>
-  <id>https://mpenalba1.github.io/startupswipe/news/</id>
+  <link href="https://startupswipegame.com/news/" rel="alternate" type="text/html"/>
+  <link href="https://startupswipegame.com/news/feed.xml" rel="self" type="application/atom+xml"/>
+  <id>https://startupswipegame.com/news/</id>
   <updated>2026-10-25T12:00:00Z</updated>
   <author><name>Maurizzio Peñalba</name></author>
-  <icon>https://mpenalba1.github.io/startupswipe/apple-touch-icon.png</icon>
+  <icon>https://startupswipegame.com/apple-touch-icon.png</icon>
   <entry>
     <title>The closed beta reaches Android</title>
-    <link href="https://mpenalba1.github.io/startupswipe/news/closed-beta-android/"/>
-    <id>https://mpenalba1.github.io/startupswipe/news/closed-beta-android/</id>
+    <link href="https://startupswipegame.com/news/closed-beta-android/"/>
+    <id>https://startupswipegame.com/news/closed-beta-android/</id>
     <published>2026-10-25T12:00:00Z</published>
     <updated>2026-10-25T12:00:00Z</updated>
     <summary>Chapter I now plays on Android too, in a closed beta.</summary>
@@ -20,8 +20,8 @@
   </entry>
   <entry>
     <title>The closed beta is open on iPhone</title>
-    <link href="https://mpenalba1.github.io/startupswipe/news/closed-beta-iphone/"/>
-    <id>https://mpenalba1.github.io/startupswipe/news/closed-beta-iphone/</id>
+    <link href="https://startupswipegame.com/news/closed-beta-iphone/"/>
+    <id>https://startupswipegame.com/news/closed-beta-iphone/</id>
     <published>2026-10-24T12:00:00Z</published>
     <updated>2026-10-24T12:00:00Z</updated>
     <summary>A small group is now playing chapter I on iPhone.</summary>
