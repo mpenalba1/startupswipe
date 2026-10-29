@@ -295,7 +295,12 @@ function home(lang, posts) {
     <blockquote class="dlg-line"><p>${esc(T.quote)}</p></blockquote>
     <img class="px dlg-face" src="${c.a('art/augusto.png')}" width="32" height="33" alt="">
   </figure>
-${T.about.map((item) => `  <p>${esc(item.p)}</p>\n  ${item.media ? media(c, item.media) : ''}`).join('\n')}
+  <div class="beats">
+${T.about.map((item, i) => `  <div class="beat beat-${item.media?.gif ? 'gif' : 'shot'}${shots[item.media?.shot]?.crop ? ' beat-crop' : ''}"${item.sign ? ` data-sign="${esc(item.sign)}"` : ''}>
+    <div class="beat-text">${item.sign ? `<p class="beat-sign">${esc(item.sign)}</p>` : ''}<p>${esc(item.p)}</p></div>
+    ${item.media ? media(c, item.media) : ''}
+  </div>`).join('\n')}
+  </div>
 </section>
 
 <section class="gallery" aria-labelledby="gal-h">

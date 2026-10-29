@@ -238,8 +238,9 @@ a.store.is-live:hover { background: var(--n6); }
 
 /* --------------------------------------------------------------- about */
 .about { max-width: calc(var(--col) + 2 * var(--gutter)); margin: 0 auto; padding: 72px var(--gutter) 0; }
-.about > p { font-size: 19px; line-height: 1.65; color: var(--soft); margin: 0; }
-.about > p:first-of-type::first-line { color: var(--text); }
+.beat-text p { font-size: 19px; line-height: 1.65; color: var(--soft); margin: 0; }
+.beat:first-child .beat-text p::first-line { color: var(--text); }
+.beat-sign { display: none; }
 .media { margin: 32px calc(-1 * var(--gutter)) 48px; background: var(--ink); }
 .media img { width: 100%; height: auto; }
 /* A part of a screenshot: --p* on phones, --d* from 640 px up (x, y, width, height in the 1920×1080 picture). */
@@ -456,3 +457,35 @@ a.store.is-live:hover { background: var(--n6); }
   .dlg-next { animation: none; }
   .btn:active { transform: none; }
 }
+
+/* ------------------------------------------- about, on computers
+   Each paragraph is a scene: the screenshot across the whole width (without the game's own bar) and the
+   paragraph in the game's dialogue box on its bottom edge, named after the place, swapping sides.
+   GIFs and the cropped minigame sit on a band with the box under them. */
+@media (min-width: 1024px) {
+  .about { max-width: none; padding: 72px 0 0; }
+  .dlg { max-width: 760px; margin: 0 auto 72px; }
+  .media { margin: 0; width: auto; }
+  .beat { position: relative; display: flex; flex-direction: column; margin: 0 0 calc(2 * var(--u)); padding-bottom: 56px; background: var(--ink); }
+  .beat-shot .media, .beat-shot .media-shot { width: 100%; border: 0; clip-path: none; }
+  /* The game's own bar is cut off, so the box doesn't sit on it. Never wider than the picture itself. */
+  .beat-shot:not(.beat-crop) .media { max-width: 1920px; margin: 0 auto; aspect-ratio: 1920 / 930; overflow: hidden; }
+  .beat-shot:not(.beat-crop) .crop { position: static; aspect-ratio: auto; }
+  .beat-shot:not(.beat-crop) .crop img { position: static; width: 100%; }
+  .beat-text {
+    position: relative; z-index: 2; order: 2; align-self: flex-start; width: min(640px, 46%); margin: -72px 0 0 40px;
+    padding: 20px 24px 22px; background: var(--n8); border: var(--u) solid var(--ink); border-bottom-width: calc(2 * var(--u)); clip-path: var(--notch);
+  }
+  .beat:nth-child(even) .beat-text { align-self: flex-end; margin: -72px 40px 0 0; }
+  .beat-text p { font: 400 22px/1.45 var(--f-pixel); font-synthesis: none; color: var(--text); }
+  .beat-text .beat-sign { display: block; margin: 0 0 12px; font: 700 17px/1 var(--f-pixel); color: var(--amber); }
+  .beat-text p:last-child::after { content: ''; display: inline-block; width: calc(3 * var(--u)); height: calc(2 * var(--u)); margin-left: 10px; vertical-align: middle;
+    background: var(--amber); clip-path: polygon(0 0, 100% 0, 100% 50%, 66.67% 50%, 66.67% 100%, 33.34% 100%, 33.34% 50%, 0 50%); animation: blink 1s steps(1, end) infinite; }
+  .beats .beat-gif, .beats .beat-crop { align-items: center; padding: 72px 0 64px; background: var(--n8); }
+  .beats .beat-gif .beat-text, .beats .beat-crop .beat-text { align-self: center; width: min(760px, calc(100% - 80px)); margin: -40px 0 0; }
+  .beat-crop .media-shot { width: min(1232px, calc(100vw - 80px)); }
+  /* GIFs at a whole scale only: their own size, or twice it where it fits. */
+  .beat-gif .media img { width: 616px; }
+}
+@media (min-width: 1320px) { .beat-gif .media img { width: 1232px; } }
+@media (prefers-reduced-motion: reduce) { .beat-text p:last-child::after { animation: none; } }
