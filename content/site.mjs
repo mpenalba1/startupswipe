@@ -11,6 +11,12 @@ export const config = {
     googleplay: null,
     steam: null,
   },
+  // The waitlist: Kit forms (app.kit.com, account StartupSwipe), one per language so the confirmation email
+  // matches. The page posts straight to Kit; Kit sends the person to routes.waitlist, then to routes.confirmed.
+  waitlist: {
+    en: 'https://app.kit.com/forms/10118637/subscriptions',
+    es: 'https://app.kit.com/forms/10118646/subscriptions',
+  },
   contact: 'maurizzio.penalba@live.com',
   copyright: '© 2026 Maurizzio Peñalba',
 };
@@ -23,6 +29,9 @@ export const routes = {
   press: { en: 'press/', es: 'es/prensa/' },
   privacy: { en: 'privacy.html', es: 'privacy.html#es' },
   support: { en: 'support.html', es: 'support.html#es' },
+  // Where Kit sends people after they sign up, and after they confirm. Set in each Kit form's settings.
+  waitlist: { en: 'waitlist/', es: 'es/lista/' },
+  confirmed: { en: 'waitlist/confirmed/', es: 'es/lista/confirmado/' },
 };
 
 // Screenshots: file (in assets/shots/<lang>/) and its alt text. The bell and the ending are left out: no spoilers.
@@ -112,6 +121,18 @@ export const t = {
     notFoundTitle: 'This page isn’t here',
     notFoundText: 'The link may be old. The home page is still where it was.',
     notFoundBack: 'Go to the home page',
+    list: {
+      label: 'We’ll write when there’s something to play.',
+      field: 'Your email',
+      button: 'Let me know',
+      note: 'One email for the demo, one for launch day. You can leave whenever you want.',
+      checkTitle: 'Check your email',
+      checkText: 'We sent you a link. Click it and you’re on the list.',
+      checkSpam: 'If it’s not there, look in spam or promotions.',
+      doneTitle: 'You’re on the list',
+      doneText: 'We’ll write when there’s something to play.',
+      back: 'Back to the home page',
+    },
     months: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
     date: (y, m, d, months) => `${months[m - 1]} ${d}, ${y}`,
     press: {
@@ -195,6 +216,18 @@ export const t = {
     notFoundTitle: 'Esta página no existe',
     notFoundText: 'Puede que el enlace sea viejo. La página de inicio sigue donde estaba.',
     notFoundBack: 'Ir al inicio',
+    list: {
+      label: 'Te escribimos cuando haya algo para jugar.',
+      field: 'Tu correo',
+      button: 'Avísame',
+      note: 'Un correo para la demo y otro para el lanzamiento. Te puedes salir cuando quieras.',
+      checkTitle: 'Revisa tu correo',
+      checkText: 'Te mandamos un enlace. Haz clic y quedas en la lista.',
+      checkSpam: 'Si no llegó, busca en spam o en promociones.',
+      doneTitle: 'Ya estás en la lista',
+      doneText: 'Te escribimos cuando haya algo para jugar.',
+      back: 'Volver al inicio',
+    },
     months: ['enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre'],
     date: (y, m, d, months) => `${d} de ${months[m - 1]} de ${y}`,
     press: {

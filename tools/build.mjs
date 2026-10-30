@@ -242,6 +242,19 @@ function media(c, m) {
   return `<figure class="media media-gif">${gifImg(c, m.gif)}</figure>`;
 }
 
+// The waitlist form. It posts straight to Kit (no script needed); Kit answers by sending the person to routes.waitlist.
+function signup(c, id) {
+  const { T, lang } = c;
+  return `<form class="signup" action="${esc(config.waitlist[lang])}" method="post">
+  <label class="signup-label" for="${id}">${esc(T.list.label)}</label>
+  <div class="signup-row">
+    <input id="${id}" class="signup-field" type="email" name="email_address" required autocomplete="email" placeholder="${esc(T.list.field)}" aria-describedby="${id}-note">
+    <button class="btn btn-cta" type="submit">${esc(T.list.button)}</button>
+  </div>
+  <p class="signup-note" id="${id}-note">${esc(T.list.note)} <a href="${c.link('privacy')}">${esc(T.nav.privacy)}</a></p>
+</form>`;
+}
+
 function postItems(c, posts) {
   return posts.map((p) => `<li class="post-item">
   <a href="${c.r(p.path)}">
@@ -275,6 +288,7 @@ function home(lang, posts) {
       <p class="hook panel">${esc(T.description)}</p>
       <div class="buy panel">
         ${stores(c, ['appstore', 'googleplay', 'steam'], { hints: true })}
+        ${signup(c, 'list-top')}
       </div>
     </div>
   </div>
@@ -344,6 +358,9 @@ ${gallery.map((k, i) => `      <li class="rail-item"><button type="button" class
     </div>
   </div>
   <p class="get-langs">${esc(T.languages)}</p>
+  <div class="get-list panel">
+    ${signup(c, 'list-end')}
+  </div>
 </section>
 ${mine.length ? `
 <section class="news-teaser" aria-labelledby="news-h">
@@ -494,6 +511,23 @@ ${footer(c, { langHref: c.link('press', c.other) })}`;
   write(file, layout(c, { title: `${T.pressTitle} | StartupSwipe`, description: P.intro, canonical: routes.press[lang], alternates: { en: routes.press.en, es: routes.press.es }, body, bodyClass: 'inner' }));
 }
 
+// ----------------------------------------------------------- waitlist pages
+// Where Kit sends people: after the form («check your email») and after the link in the email («you're on the list»).
+function waitlistPage(lang, key) {
+  const file = routes[key][lang] + 'index.html';
+  const c = ctxFor(lang, file);
+  const L = c.T.list;
+  const [title, lines] = key === 'waitlist' ? [L.checkTitle, [L.checkText, L.checkSpam]] : [L.doneTitle, [L.doneText]];
+  const body = `${header(c, { langHref: c.link(key, c.other) })}
+<main id="content" class="page waitlist">
+  <h1 class="page-title">${esc(title)}</h1>
+${lines.map((l) => `  <p>${esc(l)}</p>`).join('\n')}
+  <p><a class="btn" href="${c.link('home')}">${esc(L.back)}</a></p>
+</main>
+${footer(c, { langHref: c.link(key, c.other) })}`;
+  write(file, layout(c, { title: `${title} | StartupSwipe`, description: lines[0], canonical: null, body, bodyClass: 'inner', noindex: true }));
+}
+
 // ------------------------------------------------- privacy, support, survey
 // Their text lives in content/pages/*.html and is used as is; only the frame around it changes.
 function legacy(name, { lang, title, description, noindex = false, langSwitch = true, canonical = name + '.html' }) {
@@ -586,7 +620,7 @@ if (PREVIEW) {
 }
 const posts = readPosts();
 if (!PREVIEW) pressZip();
-for (const lang of LANGS) { home(lang, posts); newsIndex(lang, posts); feed(lang, posts); press(lang); }
+for (const lang of LANGS) { home(lang, posts); newsIndex(lang, posts); feed(lang, posts); press(lang); waitlistPage(lang, 'waitlist'); waitlistPage(lang, 'confirmed'); }
 for (const p of posts) newsPost(p);
 legacy('privacy', { lang: 'en', title: 'Privacy | StartupSwipe', description: 'How StartupSwipe handles your data. In English and Spanish.' });
 legacy('support', { lang: 'en', title: 'Support | StartupSwipe', description: 'Help with StartupSwipe: purchases, saves, stats and the beta. In English and Spanish.' });
