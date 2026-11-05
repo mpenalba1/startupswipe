@@ -13,6 +13,7 @@ dependencias (`tools/build.mjs`) y **se suben ya generadas**: GitHub Pages no co
 | Noticias | `/news/` y `/es/noticias/`, una página por noticia, y un feed Atom en cada una (`feed.xml`) | `content/news/*.md` |
 | Prensa | `/press/` y `/es/prensa/`, con un ZIP de todo el arte | `content/site.mjs` y `press/files/` |
 | Privacidad, Soporte | `/privacy.html` y `/support.html` (con `#es`) | `content/pages/privacy.html` y `support.html` |
+| Condiciones del servicio | `/terms.html` (con `#es`): Google Play la muestra en la ficha de la app | `content/pages/terms.html` |
 | Encuesta del capítulo I | `/encuesta.html` (sin enlaces, `noindex`) | `content/pages/encuesta.html` |
 
 Privacidad, Soporte y la Encuesta mantienen sus direcciones porque App Store Connect apunta a ellas. Su texto está tal

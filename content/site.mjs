@@ -17,7 +17,7 @@ export const config = {
     en: 'https://app.kit.com/forms/10118637/subscriptions',
     es: 'https://app.kit.com/forms/10118646/subscriptions',
   },
-  contact: 'maurizzio.penalba@live.com',
+  contact: 'hello@startupswipegame.com',
   copyright: '© 2026 Maurizzio Peñalba',
 };
 
@@ -29,6 +29,7 @@ export const routes = {
   press: { en: 'press/', es: 'es/prensa/' },
   privacy: { en: 'privacy.html', es: 'privacy.html#es' },
   support: { en: 'support.html', es: 'support.html#es' },
+  terms: { en: 'terms.html', es: 'terms.html#es' },
   // Where Kit sends people after they sign up, and after they confirm. Set in each Kit form's settings.
   waitlist: { en: 'waitlist/', es: 'es/lista/' },
   confirmed: { en: 'waitlist/confirmed/', es: 'es/lista/confirmado/' },
@@ -76,7 +77,7 @@ export const t = {
     worldAlt: 'The company’s tower at dusk, cut open floor by floor: offices full of people, a café and a copycat next door, and basements dug deep into the ground.',
     quoteMarks: ['“', '”'],
     skip: 'Skip to content',
-    nav: { news: 'News', press: 'Press kit', support: 'Support', privacy: 'Privacy', home: 'StartupSwipe home', main: 'Main', footer: 'More' },
+    nav: { news: 'News', press: 'Press kit', support: 'Support', privacy: 'Privacy', terms: 'Terms', home: 'StartupSwipe home', main: 'Main', footer: 'More' },
     soon: 'Coming soon',
     storesLabel: 'Where to play',
     stores: { appstore: 'App Store', googleplay: 'Google Play', steam: 'Steam' },
@@ -173,7 +174,7 @@ export const t = {
     worldAlt: 'La torre de la empresa al atardecer, abierta piso por piso: oficinas llenas de gente, un café y una copia al lado, y sótanos que bajan hondo en la tierra.',
     quoteMarks: ['«', '»'],
     skip: 'Saltar al contenido',
-    nav: { news: 'Noticias', press: 'Prensa', support: 'Soporte', privacy: 'Privacidad', home: 'Inicio de StartupSwipe', main: 'Principal', footer: 'Más' },
+    nav: { news: 'Noticias', press: 'Prensa', support: 'Soporte', privacy: 'Privacidad', terms: 'Condiciones', home: 'Inicio de StartupSwipe', main: 'Principal', footer: 'Más' },
     soon: 'Próximamente',
     storesLabel: 'Dónde jugar',
     stores: { appstore: 'App Store', googleplay: 'Google Play', steam: 'Steam' },

@@ -153,6 +153,7 @@ function footer(c, { langHref = null, langSwitch = true } = {}) {
       <a href="${c.link('press')}">${esc(T.nav.press)}</a>
       <a href="${c.link('support')}">${esc(T.nav.support)}</a>
       <a href="${c.link('privacy')}">${esc(T.nav.privacy)}</a>
+      <a href="${c.link('terms')}">${esc(T.nav.terms)}</a>
     </nav>
     <div class="foot-end">${langSwitch ? `
       <a class="foot-lang" href="${otherHref}" hreflang="${c.other}" lang="${c.other}">${esc(T.otherName)}</a>` : ''}
@@ -563,7 +564,7 @@ ${footer(c)}`;
 }
 
 function sitemap(posts) {
-  const urls = [routes.home.en, routes.home.es, routes.news.en, routes.news.es, routes.press.en, routes.press.es, 'privacy.html', 'support.html', ...posts.filter((p) => !p.draft).map((p) => p.path)];
+  const urls = [routes.home.en, routes.home.es, routes.news.en, routes.news.es, routes.press.en, routes.press.es, 'privacy.html', 'support.html', 'terms.html', ...posts.filter((p) => !p.draft).map((p) => p.path)];
   write('sitemap.xml', `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${urls.map((u) => `  <url><loc>${abs(u)}</loc></url>`).join('\n')}
@@ -624,6 +625,7 @@ for (const lang of LANGS) { home(lang, posts); newsIndex(lang, posts); feed(lang
 for (const p of posts) newsPost(p);
 legacy('privacy', { lang: 'en', title: 'Privacy | StartupSwipe', description: 'How StartupSwipe handles your data. In English and Spanish.' });
 legacy('support', { lang: 'en', title: 'Support | StartupSwipe', description: 'Help with StartupSwipe: purchases, saves, stats and the beta. In English and Spanish.' });
+legacy('terms', { lang: 'en', title: 'Terms | StartupSwipe', description: 'The terms for playing and buying StartupSwipe. In English and Spanish.' });
 legacy('encuesta', { lang: 'es', title: 'Encuesta | StartupSwipe', description: 'Encuesta del capítulo I.', noindex: true, langSwitch: false });
 notFound();
 sitemap(posts);
