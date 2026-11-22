@@ -288,7 +288,7 @@ function home(lang, posts) {
     <div class="ground">
       <p class="hook panel">${esc(T.description)}</p>
       <div class="buy panel">
-        ${stores(c, ['appstore', 'googleplay', 'steam'], { hints: true })}
+        ${stores(c, ['itch', 'appstore', 'googleplay', 'steam'], { hints: true })}
         ${signup(c, 'list-top')}
       </div>
     </div>
@@ -355,7 +355,7 @@ ${gallery.map((k, i) => `      <li class="rail-item"><button type="button" class
     <div class="card panel">
       <h3>${esc(T.computer)}</h3>
       <p>${esc(T.computerText)}</p>
-      ${stores(c, ['steam'])}
+      ${stores(c, ['itch', 'steam'])}
     </div>
   </div>
   <p class="get-langs">${esc(T.languages)}</p>

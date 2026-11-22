@@ -10,6 +10,8 @@ export const config = {
     appstore: null,
     googleplay: null,
     steam: null,
+    // itch.io is live before Steam: people follow it there to hear when the demo comes out.
+    itch: 'https://mpenalba.itch.io/startupswipe?utm_source=site',
   },
   // The waitlist: Kit forms (app.kit.com, account StartupSwipe), one per language so the confirmation email
   // matches. The page posts straight to Kit; Kit sends the person to routes.waitlist, then to routes.confirmed.
@@ -80,8 +82,8 @@ export const t = {
     nav: { news: 'News', press: 'Press kit', support: 'Support', privacy: 'Privacy', terms: 'Terms', home: 'StartupSwipe home', main: 'Main', footer: 'More' },
     soon: 'Coming soon',
     storesLabel: 'Where to play',
-    stores: { appstore: 'App Store', googleplay: 'Google Play', steam: 'Steam' },
-    storeHint: { appstore: 'iPhone', googleplay: 'Android', steam: 'Windows and macOS' },
+    stores: { appstore: 'App Store', googleplay: 'Google Play', steam: 'Steam', itch: 'itch.io' },
+    storeHint: { appstore: 'iPhone', googleplay: 'Android', steam: 'Windows and macOS', itch: 'Follow it for the demo' },
     reelLabel: 'One whole run sped up, from the garage on day 1 to the tower on day 128.',
     aboutTitle: 'About the game',
     quote: 'Here’s twenty-four thousand dollars. For a garage, that’s a fortune.',
@@ -177,8 +179,8 @@ export const t = {
     nav: { news: 'Noticias', press: 'Prensa', support: 'Soporte', privacy: 'Privacidad', terms: 'Condiciones', home: 'Inicio de StartupSwipe', main: 'Principal', footer: 'Más' },
     soon: 'Próximamente',
     storesLabel: 'Dónde jugar',
-    stores: { appstore: 'App Store', googleplay: 'Google Play', steam: 'Steam' },
-    storeHint: { appstore: 'iPhone', googleplay: 'Android', steam: 'Windows y macOS' },
+    stores: { appstore: 'App Store', googleplay: 'Google Play', steam: 'Steam', itch: 'itch.io' },
+    storeHint: { appstore: 'iPhone', googleplay: 'Android', steam: 'Windows y macOS', itch: 'Síguelo para la demo' },
     reelLabel: 'Una partida entera acelerada, del garaje el día 1 a la torre el día 128.',
     aboutTitle: 'Acerca del juego',
     quote: 'Aquí tienes veinticuatro mil dólares. Para un garaje, es una fortuna.',

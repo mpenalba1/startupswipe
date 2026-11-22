@@ -10,6 +10,40 @@
     a.addEventListener('click', () => { try { localStorage.setItem('ss-lang', a.getAttribute('hreflang')); } catch (e) { /* private mode */ } });
   }
 
+  // ------------------------------------------------------ visit counter
+  // Counts page views and clicks on the store buttons in PostHog (EU), so we know which posts bring people.
+  // No cookies and nothing stored on the device: each page view gets a throwaway id, and no person profile is made.
+  // Skipped when the browser asks not to be tracked. See privacy.html, 6d.
+  const optedOut = navigator.globalPrivacyControl === true || navigator.doNotTrack === '1';
+  if (!optedOut && /^https?:$/.test(location.protocol) && !/^(localhost|127\.)/.test(location.hostname)) {
+    const KEY = 'phc_mfCXpfA2WFhqXrcFLW2eX6nAVdUNLJbk39WHEZT6VyVe';
+    const id = 'visit-' + Math.random().toString(36).slice(2) + Date.now().toString(36);
+    const q = new URLSearchParams(location.search);
+    const utm = {};
+    for (const k of ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content']) if (q.get(k)) utm[k] = q.get(k);
+    let refDomain = '';
+    try { refDomain = document.referrer ? new URL(document.referrer).hostname : ''; } catch (e) { /* bad referrer */ }
+    const send = (event, props) => {
+      try {
+        fetch('https://eu.i.posthog.com/i/v0/e/', {
+          method: 'POST', keepalive: true, headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ api_key: KEY, event, distinct_id: id, properties: Object.assign({
+            $current_url: location.origin + location.pathname, $pathname: location.pathname,
+            $referring_domain: refDomain || '$direct', lang: document.documentElement.lang,
+            $process_person_profile: false, site: true,
+          }, utm, props) }),
+        }).catch(() => {});
+      } catch (e) { /* old browser */ }
+    };
+    send('$pageview', {});
+    for (const a of document.querySelectorAll('a.store.is-live')) {
+      a.addEventListener('click', () => send('store_click', { store: (a.querySelector('.store-name') || a).textContent.trim() }));
+    }
+    for (const f of document.querySelectorAll('form.signup')) {
+      f.addEventListener('submit', () => send('waitlist_submit', {}));
+    }
+  }
+
   // ------------------------------------------------------------ the reel
   const video = document.querySelector('.reel-video');
   if (video) {
